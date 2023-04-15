@@ -2,5 +2,4 @@ Flask
 python-dotenv
 pymongo
 bson
-secrets
 waitress
