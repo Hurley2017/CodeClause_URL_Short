@@ -11,7 +11,7 @@ ui = Flask(__name__)
 connection_address = os.environ.get("CONNECTION_URL")
 
 def random_id(n):
-    res = ''.join(secrets.choice(string.digits + string.ascii_lowercase)
+    res = ''.join(secrets.choice(string.digits + string.ascii_lowercase + string.ascii_uppercase)
                   for i in range(n))
     return res
 
