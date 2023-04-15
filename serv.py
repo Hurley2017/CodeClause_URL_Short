@@ -44,12 +44,12 @@ def process1():
     search_existing_data = Table.find_one({"longURL" : URL})
     if search_existing_data != None:
         shortkey = search_existing_data["shortURL"]
-        shortkey = "https://ayeee.ga/" + shortkey
+        shortkey = "ayeee.ga/" + shortkey
     else:
         shortkey = random_id(4)
         insert_document = {"shortURL" : shortkey, "longURL" : URL}
         Table.insert_one(insert_document)
-        shortkey = "https://ayeee.ga/" + shortkey
+        shortkey = "ayeee.ga/" + shortkey
     return shortkey
 
 
