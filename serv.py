@@ -23,7 +23,11 @@ def protocol_checker(URL):
         ret + URL
     else:
         ret =  "https://" + ret + URL
-    ret.replace("\n", "")
+    while(True):
+        if ret[-1] == '\n':
+            ret = ret[:len(ret)-1]
+        else:
+            break
     return ret
 
 @ui.route("/", methods=["GET"])
