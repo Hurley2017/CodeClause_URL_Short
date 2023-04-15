@@ -16,9 +16,9 @@ def random_id(n):
     return res
 
 def protocol_checker(URL):
-    secure_protocol = "https://www."
-    protocol = "http://www."
-    if len(URL) <= 11:
+    secure_protocol = "https://"
+    protocol = "http://"
+    if len(URL) <= 8:
         URL = secure_protocol + URL 
     elif URL[:12] == secure_protocol or URL[:11] == protocol:
         pass
