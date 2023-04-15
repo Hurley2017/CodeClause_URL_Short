@@ -39,6 +39,8 @@ def process1():
     Table = Database["Short"]
     data = request.json
     URL = data["URL"]
+    if len(URL) == 0:
+        return "No URL entered!"
     search_existing_data = Table.find_one({"longURL" : URL})
     if search_existing_data != None:
         shortkey = search_existing_data["shortURL"]
