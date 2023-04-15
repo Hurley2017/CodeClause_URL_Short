@@ -7,7 +7,7 @@ function runapp(e)
     const doc = {"URL":URL};
     const jdoc = JSON.stringify(doc);
     $.ajax({
-        url:"https://ayeee.ga/send",
+        url:"https://www.ayeee.ga/send",
         type:"POST",
         contentType:"application/json",
         data:jdoc,
