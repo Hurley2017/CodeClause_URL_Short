@@ -16,12 +16,15 @@ def random_id(n):
     return res
 
 def protocol_checker(URL):
+    ret = ""
     if URL[:8] == "https://":
-        return URL
+        ret = ret + URL
     elif URL[:7] == "http://":
-        return URL
+        ret + URL
     else:
-        return "https://" + URL
+        ret =  "https://" + ret + URL
+    ret.replace("\n", "")
+    return ret
 
 @ui.route("/", methods=["GET"])
 def browse():
@@ -36,7 +39,9 @@ def process1():
     Table = Database["Short"]
     data = request.json
     URL = data["URL"]
-    if len(URL) == 0:
+    if "ayeee.ga" in URL:
+        return "You think you smart?"
+    elif len(URL) == 0:
         return "No URL entered!"
     search_existing_data = Table.find_one({"longURL" : URL})
     if search_existing_data != None:
