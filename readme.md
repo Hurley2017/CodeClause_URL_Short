@@ -43,7 +43,7 @@ Lets start from Simple Root Directory :
 - python-dotenv
 - pymongo
 - waitress
-- bson
+- bson//def installation
 ```
 ```python
 #Applications
