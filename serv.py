@@ -70,7 +70,3 @@ def process2(id):
         return redirect(protocol_checker(flag_document["longURL"]), code=302)
     else:
         return "invalid url"
-
-
-if "__main__" == __name__:
-    ui.run()
